@@ -1,25 +1,52 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
 
 <body>
     <script src="https://yugapat.com/external_api.js"></script>
-    <script>
-        var domain = "yugapat.com";
-        var options = {
-            roomName: "adithya",
-            width: 900,
-            height: 600,
-            parentNode: undefined,
-            configOverwrite: {},
-            interfaceConfigOverwrite: {
-                filmStripOnly: true
-            }
-        }
-        var api = new JitsiMeetExternalAPI(domain, options);
-    </script>
+    <section class="section tile is-ancestor">
+        <div class="tile is-parent">
+            <div class="tile is-child" id="meet">
+                <script>
+                    var domain = "yugapat.com";
+                    var options = {
+                        roomName: "adithya",
+                        width: 600,
+                        height: 400,
+                        parentNode: document.querySelector('#meet'),
+                        configOverwrite: {},
+                        interfaceConfigOverwrite: {
+                            filmStripOnly: false
+                        }
+                    }
+                    var api = new JitsiMeetExternalAPI(domain, options);
+                </script>
+            </div>
+            <div class="tile is-child">
+                <div class="box">
+                    <p class="subtitle is-3">Poll</p>
+                    <p class="content">
+                        <label class="radio">
+                            <input type="radio" name="answer">
+                            Work from home
+                        </label>
+                    </p>
+                    <p class="content">
+                        <label class="radio">
+                            <input type="radio" name="answer">
+                            Work from office
+                        </label>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
