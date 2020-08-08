@@ -14,13 +14,6 @@ const start = async () => {
         }
 
     });
-    // const server = Hapi.server({
-    //     routes: {
-    //         files: {
-    //             relativeTo: Path.join(__dirname, 'public')
-    //         }
-    //     }
-    // });
 
     await server.register(require('@hapi/inert'));
 
@@ -30,8 +23,7 @@ const start = async () => {
         handler: function (request, h) {
 
             return h.file(request.params.fn);
-        },
-        cors: true
+        }
     });
 
     await server.start();

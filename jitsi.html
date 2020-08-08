@@ -9,21 +9,18 @@
 </head>
 
 <body>
-    <script src="https://yugapat.com/external_api.js"></script>
+    <script src="https://meet.jit.si/external_api.js"></script>
     <section class="section tile is-ancestor">
         <div class="tile is-parent">
             <div class="tile is-child" id="meet">
                 <script>
-                    var domain = "yugapat.com";
+                    var domain = 'meet.jit.si';
                     var options = {
-                        roomName: "adithya",
+                        roomName: 'JitsiMeetAPIExample',
                         width: 600,
                         height: 400,
                         parentNode: document.querySelector('#meet'),
-                        configOverwrite: {},
-                        interfaceConfigOverwrite: {
-                            filmStripOnly: false
-                        }
+                        //noSSL: true
                     }
                     var api = new JitsiMeetExternalAPI(domain, options);
                 </script>
